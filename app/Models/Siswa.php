@@ -12,6 +12,5 @@ class Siswa extends Model
         'no_induk',
         'last_updated,'
 
-
     ];
 }

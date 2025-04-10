@@ -1,0 +1,53 @@
+CREATE TABLE `user` (
+  `_id` int,
+  `username` varchar,
+  `password` varchar,
+  `email` varchar,
+  `no_hp` int,
+  `role` enum,
+  KEY `pk` (`_id`)
+);
+
+CREATE TABLE `siswa` (
+  `id_siswa` int,
+  `nama_siswa` varchar,
+  `kelas` varchar,
+  `no_induk` int,
+  `last_updated` timestamp,
+  KEY `pk` (`id_siswa`)
+);
+
+CREATE TABLE `jadwal_piket` (
+  `id_jadwal` int,
+  `hari` date,
+  `created_at` timestamp,
+  `updated_at` timestamp,
+  `id_siswa` varchar,
+  KEY `pk` (`id_jadwal`),
+  KEY `fk` (`id_siswa`)
+);
+
+CREATE TABLE `laporan_piket` (
+  `id_laporan_piket` int,
+  `status` enum,
+  `keterangan` text,
+  `photo` varchar,
+  `id_tugas` int,
+  `id_siswa` int,
+  `id_jadwal_piket` int,
+  KEY `pk` (`id_laporan_piket`),
+  KEY `fk` (`id_tugas`, `id_siswa`, `id_jadwal_piket`)
+);
+
+CREATE TABLE `tugas` (
+  `id_tugas` int,
+  `nama_tugas` varchar,
+  `deskripsi` text,
+  `status_pengerjaan` enum,
+  `last_updated` timestamp,
+  `id_jadwal` int,
+  `id_siswa` int,
+  KEY `pk` (`id_tugas`),
+  KEY `fk` (`id_jadwal`, `id_siswa`)
+);
+

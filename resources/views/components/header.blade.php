@@ -2,7 +2,7 @@
         <nav
             class="h-[70px] relative w-full px-6 md:px-16 lg:px-24 xl:px-32 flex items-center justify-between z-30 bg-gradient-to-r from-indigo-700 to-violet-500 transition-all">
 
-            <a href="#">
+            <a>
                 <img class="h-9"
                     src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/dummyLogoWhite.svg"
                     alt="dummyLogoWhite">
@@ -10,14 +10,14 @@
 
             <ul class="text-white md:flex hidden items-center gap-10">
                 <li><a class="hover:text-white/70 transition" href="#">Home</a></li>
-                <li><a class="hover:text-white/70 transition" href="#">Services</a></li>
+                {{-- <li><a class="hover:text-white/70 transition" href="#">Services</a></li>
                 <li><a class="hover:text-white/70 transition" href="#">Portfolio</a></li>
-                <li><a class="hover:text-white/70 transition" href="#">Pricing</a></li>
+                <li><a class="hover:text-white/70 transition" href="#">Pricing</a></li> --}}
             </ul>
 
             <button type="button"
                 class="bg-white text-gray-700 md:inline hidden text-sm hover:opacity-90 active:scale-95 transition-all w-40 h-11 rounded-full">
-                Get started
+                Log out
             </button>
 
             <button aria-label="menu-btn" type="button"
